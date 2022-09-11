@@ -32,4 +32,4 @@ def flyer_creator():
     img.show()
 
     # Save the edited image
-    img.save("new_flyer.png")
+    img.save("/Users/christiankossi/Documents/new_flyer.png")
