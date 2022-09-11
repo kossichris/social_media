@@ -7,9 +7,9 @@ import contentCreator as cc
 
 def main():
     mode = input("Enter step: ")
-    if mode == 'search':
+    if mode == 's':
         cc.create_content()
-    elif mode == 'edit':
+    elif mode == 'e':
         fc.flyer_creator()
     # post_platforms()
     # to_base64()
