@@ -21,7 +21,7 @@ def flyer_creator():
             align='center',)
 
     # Resize the code image
-    code_img = Image.open('/Users/christiankossi/Documents/code.png')
+    code_img = Image.open('/Users/christiankossi/Desktop/code.png')
     basewidth = 3200
     wpercent = (basewidth/float(code_img.size[0]))
     hsize = int((float(code_img.size[1])*float(wpercent)))
@@ -32,4 +32,4 @@ def flyer_creator():
     img.show()
 
     # Save the edited image
-    img.save("/Users/christiankossi/Documents/new_flyer.png")
+    img.save("/Users/christiankossi/Desktop/new_flyer.png")
