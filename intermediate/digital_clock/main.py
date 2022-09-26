@@ -1,8 +1,10 @@
 # Import the required library
+from signal import alarm
 from tkinter import *
 import time
-import playsound
 import customtkinter
+from plyer import notification
+from playsound import playsound
 
 
 # Modes: system (default), light, dark
@@ -54,7 +56,29 @@ def countdowntimer():
             mins.set('00')
             hrs.set('00')
         times -= 1
-    playsound('alarm.mp3')
+    playsound(
+        "/Users/christiankossi/Projects/python/intermediate/digital_clock/alarm.wav")
+
+
+def notifyer():
+    try:
+        notification_title = 'GREETINGS FROM JAVATPOINT!'
+        notification_message = 'Thank you for reading. Have a Good Day.'
+        notification.notify(
+            title=notification_title,
+            message=notification_message,
+            app_icon=None,
+            timeout=10,
+            toast=False
+        )
+    except:
+        raise NotImplementedError
+
+
+def reset_counter():
+    sec.set('00')
+    mins.set('00')
+    hrs.set('00')
 
 
 label = Label(win, font=text_font, bg=background,
@@ -68,7 +92,7 @@ button.place(relx=0.2, rely=0.3, anchor=CENTER)
 
 
 button = customtkinter.CTkButton(
-    master=win, width=30, text="STOP", command=countdowntimer)
+    master=win, width=30, text="STOP", command=reset_counter)
 button.place(relx=0.2, rely=0.6, anchor=CENTER)
 
 win.attributes('-topmost', True)
