@@ -71,4 +71,6 @@ button = customtkinter.CTkButton(
     master=win, width=30, text="STOP", command=countdowntimer)
 button.place(relx=0.2, rely=0.6, anchor=CENTER)
 
+win.attributes('-topmost', True)
+
 win.mainloop()
